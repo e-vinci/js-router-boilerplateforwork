@@ -14,7 +14,8 @@ module.exports = {
   devServer: {
     // contentBase: path.join(__dirname, 'dist'),
     static: {
-      directory: path.join(__dirname, 'dist')
+      directory: path.join(__dirname, 'dist'),
+      serveIndex: true,
     },
     client: {
       overlay: {
@@ -48,7 +49,7 @@ module.exports = {
       // default condition: a file with size less than 8kb will be treated as a inline
       // module type and resource module type otherwise
       {
-        test: /\.(png|jpg|gif|svg|mp3|mpe?g)$/,
+        test: /\.(png|jpg|pdf|gif|svg|mp3|mpe?g)$/,
         type: 'asset/resource',
       },
 
